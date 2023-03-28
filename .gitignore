@@ -1,2 +1,7 @@
+## nexts
 .next
 public
+
+## node modules
+node_modules
+pnpm-lock.yaml
