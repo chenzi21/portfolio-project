@@ -4,7 +4,9 @@
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-  --secondary-color: #ED4755;
+  --primary-color: #ED4755;
+  --secondary-grey-color: #676977;
+  --secondary-black-color: #2A2C40;
   font-size: 100%;
 }
 

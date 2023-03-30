@@ -1,0 +1,52 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .nav-list {
+        display: flex;
+        gap: 5vw;
+
+        .nav-link {
+            width: fit-content;
+            font-weight: bold;
+            font-size: clamp(1rem, 1.5vw, 2rem);
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--primary-color);
+            padding: 5px 0px;
+            display: inline-block;
+            position: relative;
+            opacity: 0.75;
+            list-style-type: none;
+        }
+
+        .nav-link:hover {
+            opacity: 1;
+        }
+
+        .nav-link::before {
+            width: 0%;
+            bottom: 0px;
+            transition: 300ms;
+            height: 2px;
+            content: "";
+            position: absolute;
+            background-color: var(--primary-color);
+        }
+
+        .nav-link:hover::before {
+            width: 100%;
+        }
+    }
+}
+
+@keyframes navHoverUnderline {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 80%;
+    }
+}

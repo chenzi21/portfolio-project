@@ -1,0 +1,15 @@
+@import ".././global/mixin";
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 80%;
+}
+
+@include media-max-width() {
+    .intro {
+        max-width: fit-content;
+        align-items: center;
+    }
+}
