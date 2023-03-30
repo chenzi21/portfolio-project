@@ -1,0 +1,17 @@
+@import "../global/mixin";
+
+.skills-container {
+    width: 70%;
+    max-height: 450px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
+    gap: 1.5rem;
+    align-items: center;
+}
+
+@include media-max-width() {
+    .skills-container {
+        width: initial;
+        grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    }
+}

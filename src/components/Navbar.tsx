@@ -13,8 +13,8 @@ export const navigations: { title: string; url: string }[] = [
         url: "/#skills"
     },
     {
-        title: "Contact Me",
-        url: "/#contactme"
+        title: "Contact",
+        url: "/#contact"
     }
 ]
 

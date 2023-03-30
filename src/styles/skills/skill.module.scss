@@ -1,0 +1,41 @@
+@import "../global/mixin";
+
+$svg-proportions: 60%;
+
+.skill-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+
+    min-width: 30px;
+
+    border-radius: 15px;
+    background: linear-gradient(145deg, #202233, #25293d);
+    box-shadow: 10px 10px 20px #1e2030,
+        -10px -10px 20px #282c42;
+
+    aspect-ratio: 1;
+
+    .title {
+        font-size: clamp(1rem, 1.5vw, 3rem);
+        color: var(--secondary-grey-color);
+    }
+
+    .skill {
+        width: $svg-proportions;
+        height: $svg-proportions;
+        border-radius: 5px;
+        padding: 0.2rem;
+        fill: var(--primary-color);
+    }
+}
+
+@include media-max-width() {
+    .skill-wrapper {
+        .title {
+            font-size: clamp(0.7rem, 3vw, 1.5rem);
+        }
+    }
+}
