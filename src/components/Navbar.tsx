@@ -3,7 +3,7 @@ import { useMemo } from "react";
 import styles from "../styles/navbar.module.scss";
 import { inter } from "@/libs/fonts";
 
-const navigations: { title: string; url: string }[] = [
+export const navigations: { title: string; url: string }[] = [
     {
         title: "Intro",
         url: "/#intro"

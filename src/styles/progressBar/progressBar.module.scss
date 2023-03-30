@@ -1,0 +1,47 @@
+$dot-proportion: 15px;
+$line-width: 2px;
+
+.progress-bar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 250px;
+    min-width: 5%;
+    padding: 0.5rem 0;
+
+    .dot-container {
+        min-width: $dot-proportion;
+        height: calc(100% / 3);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+
+        .dot {
+            border: solid 1px var(--primary-color);
+            width: $dot-proportion;
+            height: $dot-proportion;
+            border-radius: 50px;
+            cursor: pointer;
+
+            &[data-active="true"] {
+                background-color: var(--primary-color);
+            }
+        }
+
+        &:not(:last-child)::before {
+            content: "";
+            height: calc(100% - $dot-proportion);
+            width: $line-width;
+            background-color: var(--secondary-grey-color);
+            position: absolute;
+            right: calc(calc($dot-proportion - $line-width) / 2);
+            top: $dot-proportion;
+        }
+
+        &:last-child {
+            height: min-content;
+        }
+    }
+}
