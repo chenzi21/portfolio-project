@@ -1,4 +1,4 @@
-@import "../global/mixin";
+@import "../global/mixin.module";
 
 $svg-proportions: 60%;
 
@@ -12,9 +12,9 @@ $svg-proportions: 60%;
     min-width: 30px;
 
     border-radius: 15px;
-    background: linear-gradient(145deg, #202233, #25293d);
-    box-shadow: 10px 10px 20px #1e2030,
-        -10px -10px 20px #282c42;
+    background: linear-gradient(145deg, #1d1e2d, #25293d);
+    box-shadow: 20px 20px 25px #1e2030,
+        -20px -20px 25px #282c42;
 
     aspect-ratio: 1;
 

@@ -1,0 +1,119 @@
+@import "../global/fonts.module";
+@import "../global/mixin.module";
+
+$computer-svg-proportion: 25svw;
+$min-proportion: 150px;
+
+// 7 seconds (for cursor animation 2 seconds at start and at end; three seconds in the middle for typing animation)
+$total-animation-time: 7s;
+
+.computer-container {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+
+    .computer {
+        display: block;
+        width: $computer-svg-proportion;
+        height: $computer-svg-proportion;
+        min-height: $min-proportion;
+        min-width: $min-proportion;
+    }
+
+    .text-container {
+        position: absolute;
+        top: 35%;
+        left: 20%;
+        display: flex;
+        height: 5%;
+        text-align: center;
+        align-items: center;
+        gap: 3px;
+        overflow-x: hidden;
+        width: 60%;
+
+        .text {
+            max-width: 100%;
+            overflow-x: hidden;
+            text-overflow: initial;
+            white-space: nowrap;
+            animation: keyboard-typing infinite $total-animation-time linear;
+            font-family: VSCODE;
+            font-size: clamp(0.35rem, 0.9vw, 1.5rem);
+
+            .yellow {
+                color: rgb(196, 196, 24);
+            }
+
+            .red {
+                color: rgb(166, 52, 48);
+            }
+        }
+
+        .cursor {
+            height: 100%;
+            width: 1px;
+            background-color: white;
+            animation: cursor $total-animation-time infinite ease-out;
+            opacity: 0;
+        }
+    }
+}
+
+@keyframes keyboard-typing {
+
+    0%,
+    28% {
+        max-width: 5px;
+        visibility: hidden;
+    }
+
+    50% {
+        max-width: 50%;
+        visibility: visible;
+    }
+
+    78%,
+    100% {
+        max-width: 100%;
+    }
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 1;
+    }
+
+    7% {
+        opacity: 0;
+    }
+
+    14% {
+        opacity: 1;
+    }
+
+    21% {
+        opacity: 0;
+    }
+
+    28%,
+    78% {
+        opacity: 1;
+    }
+
+    84% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

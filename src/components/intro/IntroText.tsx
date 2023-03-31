@@ -8,7 +8,7 @@ export default function IntroText() {
                 Hello, I'm <span>Chen Zadik</span>,
             </h1>
             <h1 className={`${styles.text} ${inter.className}`}>
-                a Full Stack Developer.
+                a {`<Full Stack Developer>`}.
             </h1>
         </header>
         <p className={styles["sub-header"]}>

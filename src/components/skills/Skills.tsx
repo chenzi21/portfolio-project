@@ -1,10 +1,10 @@
-import ReactLogo from "../../icons/react";
-import Graphql from "../../icons/GraphQL";
-import NextJS from "../../icons/nextjs";
-import Database from "../../icons/database";
-import Github from "../../icons/github";
-import Typescript from "../../icons/typescript";
-import Javascript from "../../icons/javascript";
+import ReactLogo from "../../files/icons/react";
+import Graphql from "../../files/icons/GraphQL";
+import NextJS from "../../files/icons/nextjs";
+import Database from "../../files/icons/database";
+import Github from "../../files/icons/github";
+import Typescript from "../../files/icons/typescript";
+import Javascript from "../../files/icons/javascript";
 import styles from "../../styles/skills/skills.module.scss"
 import Skill from "./Skill";
 import { useMemo } from "react";
