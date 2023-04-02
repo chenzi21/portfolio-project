@@ -4,7 +4,7 @@ import IntroText from "./IntroText";
 
 export default function Intro() {
     return (
-        <div className={styles.intro}>
+        <div className={styles.intro} id="intro">
             <IntroText />
             <ProgressBar />
         </div>

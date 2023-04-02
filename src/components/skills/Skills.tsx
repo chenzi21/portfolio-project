@@ -22,7 +22,7 @@ const icons = [
 export default function Skills() {
     const IconsHTML = useMemo(() => icons.map(({ Icon, key }) => <Skill Icon={Icon} key={key} title={key} />), []);
 
-    return (<div className={styles["skills-container"]}>
+    return (<div className={styles["skills-container"]} id="skills">
         {IconsHTML}
     </div>)
 }

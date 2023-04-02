@@ -10,6 +10,11 @@
   font-size: 100%;
 }
 
+@font-face {
+  font-family: VSCODE;
+  src: url("../files//fonts/Cascadia.ttf");
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
