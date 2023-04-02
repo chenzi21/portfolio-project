@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useMemo } from "react";
 import styles from "../styles/navbar.module.scss";
 import { inter } from "@/libs/fonts";
@@ -20,11 +19,11 @@ export const navigations: { title: string; url: string }[] = [
 
 export default function Navbar() {
     const navigationsListItems = useMemo(() => navigations.map(({ title, url }) => (
-        <Link passHref href={url} key={title} className={styles["nav-link"]}>
-            <li className={inter.className}>
+        <li className={inter.className} key={title}>
+            <a href={url} className={styles["nav-link"]}>
                 {title}
-            </li>
-        </Link>
+            </a>
+        </li>
     )), [])
 
     return (

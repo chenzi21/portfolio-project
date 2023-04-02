@@ -1,7 +1,7 @@
 @import "../global/mixin.module";
 
 $computer-svg-proportion: 25svw;
-$min-proportion: 150px;
+$min-proportion: 200px;
 
 // 7 seconds (for cursor animation 2 seconds at start and at end; three seconds in the middle for typing animation)
 $total-animation-time: 7s;
@@ -36,7 +36,7 @@ $total-animation-time: 7s;
             overflow-x: hidden;
             text-overflow: initial;
             white-space: nowrap;
-            animation: keyboard-typing infinite $total-animation-time linear;
+            animation: keyboard-typing $total-animation-time infinite linear;
             font-family: VSCODE;
             font-size: clamp(0.35rem, 0.9vw, 1.5rem);
 
@@ -67,52 +67,28 @@ $total-animation-time: 7s;
         visibility: hidden;
     }
 
-    50% {
-        max-width: 50%;
-        visibility: visible;
-    }
-
     78%,
     100% {
+        visibility: visible;
         max-width: 100%;
     }
 }
 
 @keyframes cursor {
-    0% {
-        opacity: 1;
-    }
 
-    7% {
-        opacity: 0;
-    }
-
-    14% {
-        opacity: 1;
-    }
-
-    21% {
-        opacity: 0;
-    }
-
+    0%,
+    14%,
     28%,
-    78% {
-        opacity: 1;
-    }
-
-    84% {
-        opacity: 0;
-    }
-
-    90% {
-        opacity: 1;
-    }
-
-    95% {
-        opacity: 0;
-    }
-
+    78%,
+    90%,
     100% {
         opacity: 1;
+    }
+
+    7%,
+    21%,
+    84%,
+    95% {
+        opacity: 0;
     }
 }

@@ -1,17 +1,19 @@
 @import "../global/mixin.module";
 
 .skills-container {
-    width: 70%;
-    max-height: 450px;
+    width: 100%;
+    min-height: fit-content;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
-    gap: 1.5rem;
     align-items: center;
+    column-gap: 2vw;
+    row-gap: 3vh;
+    padding: 0px 10vw;
 }
 
 @include media-max-width() {
     .skills-container {
         width: initial;
-        grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     }
 }
