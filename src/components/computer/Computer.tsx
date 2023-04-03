@@ -7,10 +7,12 @@ export default function Computer() {
             <ComputerSVG className={styles.computer} />
             <div className={styles["text-container"]}>
                 <p className={styles.text}>
-                    console.<span className={styles.yellow}>log(</span><span className={styles.red}>"hello world"</span><span className={styles.yellow}>)</span>;
+                    <span className={styles.blue}>console</span>.<span className={styles.pink}><span className={styles.yellow}>log</span><span className={styles.pink}>(</span></span><span className={styles.red}>"hello world"</span><span className={styles.pink}>)</span>;
                 </p>
                 <div className={styles.cursor} />
             </div>
         </div>
     )
 }
+
+console.log("hello world");

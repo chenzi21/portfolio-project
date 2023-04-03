@@ -3,6 +3,9 @@
 $computer-svg-proportion: 25svw;
 $min-proportion: 200px;
 
+// for centering div calculations
+$text-container-max-width: 70%;
+
 // 7 seconds (for cursor animation 2 seconds at start and at end; three seconds in the middle for typing animation)
 $total-animation-time: 7s;
 
@@ -21,15 +24,15 @@ $total-animation-time: 7s;
 
     .text-container {
         position: absolute;
-        top: 35%;
-        left: 20%;
+        top: 37.5%;
+        left: calc(calc(100% - $text-container-max-width) / 2);
         display: flex;
         height: 5%;
         text-align: center;
         align-items: center;
         gap: 3px;
         overflow-x: hidden;
-        width: 60%;
+        max-width: $text-container-max-width;
 
         .text {
             max-width: 100%;
@@ -38,14 +41,22 @@ $total-animation-time: 7s;
             white-space: nowrap;
             animation: keyboard-typing $total-animation-time infinite linear;
             font-family: VSCODE;
-            font-size: clamp(0.35rem, 0.9vw, 1.5rem);
+            font-size: clamp(0.5rem, 1.1vw, 1.5rem);
+
+            .blue {
+                color: #9cdcfe;
+            }
 
             .yellow {
-                color: rgb(196, 196, 24);
+                color: #dcdcaa
+            }
+
+            .pink {
+                color: #da70d6;
             }
 
             .red {
-                color: rgb(166, 52, 48);
+                color: #ce9178;
             }
         }
 
