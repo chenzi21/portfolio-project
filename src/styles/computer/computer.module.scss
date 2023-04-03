@@ -33,13 +33,13 @@ $total-animation-time: 7s;
         gap: 3px;
         overflow-x: hidden;
         max-width: $text-container-max-width;
+        animation: typing-animation $total-animation-time infinite linear;
+        border-right: 1px solid;
 
         .text {
-            max-width: 100%;
             overflow-x: hidden;
             text-overflow: initial;
             white-space: nowrap;
-            animation: keyboard-typing $total-animation-time infinite linear;
             font-family: VSCODE;
             font-size: clamp(0.5rem, 1.1vw, 1.5rem);
 
@@ -76,17 +76,18 @@ $total-animation-time: 7s;
         border-right-color: transparent;
     }
 
-    78% {
-        max-width: 60%; // Telling the text to fit-content by setting the max-width to 60%.
+    70% {
+        max-width: 100%;
+        border-right-color: rgba(255, 255, 255, 0.75);
     }
 
-    85%,
-    95% {
+    77%,
+    91% {
         border-right-color: transparent;
     }
 
-    90%,
-    100% {
+    84%,
+    98% {
         border-right-color: rgba(255, 255, 255, 0.75);
     }
 }

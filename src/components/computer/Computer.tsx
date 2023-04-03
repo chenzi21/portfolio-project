@@ -13,5 +13,3 @@ export default function Computer() {
         </div>
     )
 }
-
-console.log("hello world");
