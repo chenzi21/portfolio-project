@@ -59,47 +59,34 @@ $total-animation-time: 7s;
                 color: #ce9178;
             }
         }
-
-        .cursor {
-            height: 100%;
-            width: 1px;
-            background-color: white;
-            animation: cursor $total-animation-time infinite ease-out;
-            opacity: 0;
-        }
     }
 }
 
-@keyframes keyboard-typing {
-
-    0%,
-    28% {
-        max-width: 5px;
-        visibility: hidden;
-    }
-
-    78%,
-    100% {
-        visibility: visible;
-        max-width: 100%;
-    }
-}
-
-@keyframes cursor {
+@keyframes typing-animation {
 
     0%,
     14%,
-    28%,
-    78%,
-    90%,
-    100% {
-        opacity: 1;
+    28% {
+        border-right-color: rgba(255, 255, 255, 0.75);
+        max-width: 0%;
     }
 
     7%,
-    21%,
-    84%,
+    21% {
+        border-right-color: transparent;
+    }
+
+    78% {
+        max-width: 60%; // Telling the text to fit-content by setting the max-width to 60%.
+    }
+
+    85%,
     95% {
-        opacity: 0;
+        border-right-color: transparent;
+    }
+
+    90%,
+    100% {
+        border-right-color: rgba(255, 255, 255, 0.75);
     }
 }

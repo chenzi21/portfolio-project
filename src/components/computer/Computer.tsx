@@ -9,7 +9,6 @@ export default function Computer() {
                 <p className={styles.text}>
                     <span className={styles.blue}>console</span>.<span className={styles.pink}><span className={styles.yellow}>log</span><span className={styles.pink}>(</span></span><span className={styles.red}>"hello world"</span><span className={styles.pink}>)</span>;
                 </p>
-                <div className={styles.cursor} />
             </div>
         </div>
     )
