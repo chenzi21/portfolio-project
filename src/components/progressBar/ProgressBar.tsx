@@ -1,18 +1,20 @@
 "use client"
 
 import styles from "../../styles/progressBar/progressBar.module.scss";
-import useProgressBarStore from "@/libs/progressBarStore";
 import { navigations } from "../Navbar";
+import { useSearchParams } from 'next/navigation';
 
 export default function ProgressBar() {
-    const { progress, setProgress } = useProgressBarStore((store) => store);
+    const query = useSearchParams();
+
+    console.log(query.keys().next())
 
     return (
         <div className={styles["progress-bar-container"]}>
             {navigations.map(({ title, url }, i) =>
-                <div className={styles["dot-container"]} key={title} onClick={() => setProgress(i)}>
+                <div className={styles["dot-container"]} key={title}>
                     <a key={title} href={url}>
-                        <div className={styles.dot} data-active={i == progress} />
+                        <div className={styles.dot} />
                     </a>
                 </div>
             )}
