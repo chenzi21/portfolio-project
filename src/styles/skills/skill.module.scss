@@ -10,6 +10,7 @@ $svg-proportions: 60%;
     gap: 1vw;
 
     min-width: 30px;
+    max-width: 200px;
 
     border-radius: 15px;
     background: linear-gradient(145deg, #1d1e2d, #25293d);
@@ -26,7 +27,7 @@ $svg-proportions: 60%;
     .skill {
         width: $svg-proportions;
         height: $svg-proportions;
-        border-radius: 20px;
+        border-radius: 10px;
         padding: 0.2rem;
         fill: var(--primary-color);
     }

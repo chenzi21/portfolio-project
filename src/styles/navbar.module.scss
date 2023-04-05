@@ -1,5 +1,7 @@
 @import "./global/mixin.module";
 
+$hamburger-transition-specs: all 325ms ease-in-out;
+
 .navbar {
     display: flex;
     justify-content: center;
@@ -45,6 +47,79 @@
 
 @include media-max-width() {
     .navbar {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .nav-list {
+            transform: translateX(calc(-100% - var(--main-sm-window-x-axis-padding)));
+            top: 0;
+            width: 100%;
+            height: 100svh;
+            background-color: black;
+            position: fixed;
+            transition: $hamburger-transition-specs;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10vh;
+            visibility: hidden;
+            z-index: 4;
+        }
+
+        .checkbox:checked~.nav-list {
+            transform: translateX(calc(-1 * var(--main-sm-window-x-axis-padding)));
+            visibility: visible;
+        }
+
+        .checkbox-label {
+            width: fit-content;
+            height: fit-content;
+            min-height: 25px;
+            padding: 2vh 4vw;
+            align-self: flex-start;
+            cursor: pointer;
+            z-index: 5;
+
+
+            .hamburger {
+                position: relative;
+                @include hamburger-line();
+                transition: $hamburger-transition-specs;
+
+                &::after {
+                    position: absolute;
+                    top: 1vh;
+                    @include hamburger-line();
+                    content: "";
+                    transition: $hamburger-transition-specs;
+                }
+
+                &::before {
+                    position: absolute;
+                    top: -1vh;
+                    @include hamburger-line();
+                    content: "";
+                    transition: $hamburger-transition-specs;
+                }
+            }
+
+        }
+
+        .checkbox:checked~.checkbox-label>.hamburger {
+            background-color: transparent;
+        }
+
+        .checkbox:checked~.checkbox-label>.hamburger::after {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+
+        .checkbox:checked~.checkbox-label>.hamburger::before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+
+
     }
 }

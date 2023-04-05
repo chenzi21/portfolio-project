@@ -3,3 +3,9 @@
         @content;
     }
 }
+
+@mixin hamburger-line {
+    background-color: white;
+    width: clamp(1.3rem, 6vw, 2rem);
+    height: 2px;
+}

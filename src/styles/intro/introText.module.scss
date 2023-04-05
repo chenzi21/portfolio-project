@@ -1,40 +1,39 @@
 @import ".././global/mixin.module";
 
-.wrapper {
+
+.header {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    align-items: flex-start;
+    max-width: 90%;
+    gap: 0.5rem;
 
-    .header {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        max-width: 100%;
-        gap: 0.5rem;
+    >h1 {
+        max-width: 65%;
+        max-height: fit-content;
+        font-size: clamp(1.5rem, 2vw, 3rem);
+    }
 
-        .text {
-            max-width: 100%;
-            max-height: fit-content;
-            font-size: clamp(2rem, 3vw, 5rem);
-        }
-
-        .text>span {
-            color: var(--primary-color);
-        }
+    >h1>span {
+        color: var(--primary-color);
     }
 
     .sub-header {
-        font-size: clamp(1.5rem, 2vw, 3rem);
+        font-size: clamp(1rem, 1.5vw, 2rem);
         color: var(--secondary-grey-color);
         max-width: 90%;
     }
 }
 
+
+
 @include media-max-width() {
-    .warpper {
-        .header {
-            max-width: 80%;
-            align-items: center;
+    .header {
+        max-width: 80%;
+        align-items: center;
+        text-align: center;
+
+        * {
             text-align: center;
         }
     }

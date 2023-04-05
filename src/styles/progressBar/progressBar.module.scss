@@ -1,12 +1,14 @@
+@import "../global/mixin.module";
+
 $dot-proportion: 15px;
 $line-width: 2px;
 
 .progress-bar-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    height: 250px;
+    height: 100%;
     min-width: 5%;
 
     .dot-container {
@@ -42,5 +44,11 @@ $line-width: 2px;
         &:last-child {
             height: min-content;
         }
+    }
+}
+
+@include media-max-width() {
+    .progress-bar-container {
+        display: none;
     }
 }

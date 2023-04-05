@@ -2,13 +2,12 @@
 
 .skills-container {
     width: 100%;
-    min-height: fit-content;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
     align-items: center;
+    justify-items: center;
     column-gap: 2vw;
     row-gap: 3vh;
-    padding: 0px 10vw;
 }
 
 @include media-max-width() {

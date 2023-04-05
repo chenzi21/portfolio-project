@@ -7,6 +7,8 @@
   --primary-color: #ED4755;
   --secondary-grey-color: #676977;
   --secondary-black-color: #232639;
+  --main-lg-window-x-axis-padding: 10vw;
+  --main-sm-window-x-axis-padding: 3vw;
   font-size: 100%;
 }
 

@@ -1,3 +1,5 @@
+@import "../global/mixin.module";
+
 .main {
     display: flex;
     flex-direction: column;
@@ -7,5 +9,12 @@
     width: 100%;
     overflow-y: auto;
     scroll-behavior: smooth;
-    scroll-padding-top: 2rem;
+    scroll-padding-top: 1vh;
+    padding: 2vh var(--main-lg-window-x-axis-padding);
+}
+
+@include media-max-width() {
+    .main {
+        padding: 2vh var(--main-sm-window-x-axis-padding);
+    }
 }
