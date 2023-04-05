@@ -26,10 +26,7 @@ const nextConfig = {
     fileLoaderRule.exclude = /\.svg$/i
 
     return config
-  },
-  experimental: {
-    appDir: true,
-  },
+  }
 }
 
 module.exports = nextConfig

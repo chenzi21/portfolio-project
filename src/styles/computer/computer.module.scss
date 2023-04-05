@@ -1,8 +1,5 @@
 @import "../global/mixin.module";
 
-$computer-svg-proportion: 25svw;
-$min-proportion: 200px;
-
 // for centering div calculations
 $text-container-max-width: 70%;
 
@@ -16,10 +13,7 @@ $total-animation-time: 7s;
 
     .computer {
         display: block;
-        width: $computer-svg-proportion;
-        height: $computer-svg-proportion;
-        min-height: $min-proportion;
-        min-width: $min-proportion;
+        height: 40svh;
     }
 
     .text-container {
