@@ -3,16 +3,16 @@
 .skills-container {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     align-items: center;
     justify-items: center;
     column-gap: 2vw;
     row-gap: 3vh;
+    padding: 0 5vw;
 }
 
 @include media-max-width() {
     .skills-container {
-        width: initial;
         grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     }
 }

@@ -11,7 +11,7 @@
     >h1 {
         max-width: 65%;
         max-height: fit-content;
-        font-size: clamp(1.5rem, 2vw, 3rem);
+        font-size: clamp(1.5rem, 2.5vw + 1rem, 2.5rem);
     }
 
     >h1>span {
@@ -19,7 +19,7 @@
     }
 
     .sub-header {
-        font-size: clamp(1rem, 1.5vw, 2rem);
+        font-size: clamp(1rem, 2vw + 0.5rem, 2rem);
         color: var(--secondary-grey-color);
         max-width: 90%;
     }

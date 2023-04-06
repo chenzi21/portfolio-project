@@ -2,7 +2,7 @@
 
 import styles from "../../styles/progressBar/progressBar.module.scss";
 import useProgressBarStore from "@/libs/progressBarStore";
-import { navigations } from "../Navbar";
+import { navigations } from "../navbar/Navbar";
 
 export default function ProgressBar() {
     const { progress, setProgress } = useProgressBarStore((store) => store);

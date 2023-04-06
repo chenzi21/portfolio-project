@@ -1,7 +1,7 @@
 "use client"
 
 import styles from "../../styles/pages/homePage.module.scss";
-import Navbar from "../Navbar";
+import Navbar from "../navbar/Navbar";
 import Computer from "../computer/Computer";
 import Intro from "../intro/Intro";
 

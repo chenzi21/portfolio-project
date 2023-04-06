@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import styles from "../styles/navbar.module.scss";
+import styles from "../../styles/navbar/navbar.module.scss";
 import { inter } from "@/libs/fonts";
 
 export const navigations: { title: string; url: string }[] = [
