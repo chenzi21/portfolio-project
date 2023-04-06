@@ -11,6 +11,8 @@
     scroll-behavior: smooth;
     scroll-padding-top: 1vh;
     padding: 2vh var(--main-lg-window-x-axis-padding);
+    gap: 2vh;
+    gap: 2svh;
 }
 
 @include media-max-width() {

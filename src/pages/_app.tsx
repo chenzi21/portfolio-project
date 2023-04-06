@@ -1,5 +1,5 @@
 import { AppContext, AppInitialProps } from 'next/app';
-import '../styles/pages/globals.css';
+import '../styles/global/globals.css';
 
 export const metadata = {
     title: "Chen Zadik's Portfolio",
