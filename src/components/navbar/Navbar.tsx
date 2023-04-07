@@ -34,6 +34,7 @@ export default function Navbar() {
                 className={styles.checkbox}
                 id="menu-toggle"
                 type="checkbox"
+                readOnly
                 hidden
                 checked={checked}
                 aria-checked={checked}
