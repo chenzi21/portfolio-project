@@ -1,22 +1,22 @@
 import { create } from "zustand";
 
-export type ContactMeStore = {
+export type ContactMeInputs = {
     name: string;
     email: string;
     message: string;
 };
 
-type ContactMeActions = {
-    setInput: (key: keyof ContactMeStore, value: string) => void
+export type ContactMeActions = {
+    setInput: (key: keyof ContactMeInputs, value: string) => void
 };
 
-export const ContactMeIntialState: ContactMeStore = {
+export const ContactMeIntialState: ContactMeInputs = {
     name: "",
     email: "",
     message: "",
 };
 
-export const useContactMeStore = create<ContactMeStore & ContactMeActions>((set) => ({
+export const useContactMeStore = create<ContactMeInputs & ContactMeActions>((set) => ({
     ...ContactMeIntialState,
-    setInput: (key: keyof ContactMeStore, value: string) => set({ [key]: value }),
+    setInput: (key: keyof ContactMeInputs, value: string) => set({ [key]: value }),
 }));
