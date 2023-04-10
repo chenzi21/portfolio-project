@@ -3,16 +3,25 @@
 .skills-container {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
     align-items: center;
     justify-items: center;
     column-gap: 2vw;
     row-gap: 3vh;
-    padding: 0 5vw;
+    padding: 0 10%;
 }
 
-@include media-max-width() {
+// @include media-max-width("mobile") {
+//     .skills-container {
+//         grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+//         padding: 0 5%;
+//     }
+// }
+
+
+@include media-max-width("mobile") {
     .skills-container {
         grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+        padding: 0 5%;
     }
 }

@@ -8,6 +8,7 @@ export type ContactMeInputs = {
 
 export type ContactMeActions = {
     setInput: (key: keyof ContactMeInputs, value: string) => void
+    reset: () => void;
 };
 
 export const ContactMeIntialState: ContactMeInputs = {
@@ -19,4 +20,5 @@ export const ContactMeIntialState: ContactMeInputs = {
 export const useContactMeStore = create<ContactMeInputs & ContactMeActions>((set) => ({
     ...ContactMeIntialState,
     setInput: (key: keyof ContactMeInputs, value: string) => set({ [key]: value }),
+    reset: () => set({ message: "" })
 }));

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import styles from "../../styles/navbar/navbar.module.scss";
 import { inter } from "@/libs/fonts";
 

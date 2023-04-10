@@ -1,0 +1,13 @@
+.submit {
+    grid-column: 1/-1;
+    justify-self: center;
+    font-size: clamp(1rem, 1.5vw + 0.5rem, 2rem);
+    padding: 0.4em 0.7em;
+    width: min-content;
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    // border-radius: 15px;
+    cursor: pointer;
+
+}
