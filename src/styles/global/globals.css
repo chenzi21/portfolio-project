@@ -4,6 +4,7 @@
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --media-mobile-lg: 425px;
   --primary-color: #ED4755;
   --secondary-grey-color: #676977;
   --secondary-black-color: #232639;
@@ -31,6 +32,8 @@ body {
   height: 100svh;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  overflow-y: auto;
+
 }
 
 body {
@@ -40,10 +43,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: color-dodge;
+  user-select: none;
 }
 
 #__next {
   height: 100%;
+  overflow-y: auto;
 }
 
 a {

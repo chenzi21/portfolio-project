@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import styles from "../../styles/navbar/navbar.module.scss";
 import { inter } from "@/libs/fonts";
 
@@ -34,6 +34,7 @@ export default function Navbar() {
                 className={styles.checkbox}
                 id="menu-toggle"
                 type="checkbox"
+                readOnly
                 hidden
                 checked={checked}
                 aria-checked={checked}
