@@ -1,3 +1,4 @@
+import axios from "axios";
 import { create } from "zustand";
 
 export type ContactMeInputs = {
@@ -9,6 +10,7 @@ export type ContactMeInputs = {
 export type ContactMeActions = {
     setInput: (key: keyof ContactMeInputs, value: string) => void
     reset: () => void;
+    submitForm: () => Promise<void>;
 };
 
 export const ContactMeIntialState: ContactMeInputs = {
@@ -17,8 +19,19 @@ export const ContactMeIntialState: ContactMeInputs = {
     message: "",
 };
 
-export const useContactMeStore = create<ContactMeInputs & ContactMeActions>((set) => ({
+export const useContactMeStore = create<ContactMeInputs & ContactMeActions>((set, get) => ({
     ...ContactMeIntialState,
     setInput: (key: keyof ContactMeInputs, value: string) => set({ [key]: value }),
-    reset: () => set({ message: "" })
+    reset: () => set(ContactMeIntialState),
+    submitForm: async () => {
+        const { email, message, name } = get();
+        axios
+            .post("https://getform.io/f/{your-form-endpoint}", {
+                email,
+                message,
+                name,
+            })
+            .then(() => get().reset())
+            .catch(error => console.log(error))
+    }
 }));

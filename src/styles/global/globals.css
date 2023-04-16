@@ -43,6 +43,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: color-dodge;
+  user-select: none;
 }
 
 #__next {

@@ -16,23 +16,15 @@ export default function Input({ input, onChange }: Props) {
         }
     }, []);
 
-    const InputElement = useMemo(() =>
-    (
-        <>
+    return (
+        <div className={`${styles.container} ${input === "message" ? styles["text-area-container"] : ""}`}>
+            <text className={styles.title}>{input}</text>
             {input === "message" ?
                 <textarea name={input} className={styles.textarea} value={value} onChange={handleChange} />
                 :
                 <input name={input} id={input} autoComplete="off" type={input === "email" ? "email" : "text"} className={styles.input} value={value} onChange={handleChange} />
             }
             <label className={styles.label} htmlFor={input} />
-        </>
-    )
-        , [value])
-
-    return (
-        <div className={`${styles.container} ${input === "message" ? styles["text-area-container"] : ""}`}>
-            <text className={styles.title}>{input}</text>
-            {InputElement}
         </div>
     );
 }
